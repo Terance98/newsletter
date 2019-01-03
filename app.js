@@ -32,8 +32,11 @@ app.post("/",function(req, res){
     ]
   };
   var jsonData = JSON.stringify(data);
+  //The part following /lists/ is the unique list ID of your mailchimp list. This is a sample mailchimp listID.
+  //In Authorization the part following skippy is your API key. This is a deactivated API key of mine.
+  //Since both the list ID and API are confidential. I haven't shared them in this project.
   var option = {
-    url : 'https://us7.api.mailchimp.com/3.0/lists/23e69263c0',
+    url : 'https://us7.api.mailchimp.com/3.0/lists/22h69263c0',
     method : "POST",
     headers : {
       "Authorization" : "skippy 8c0cfe6e95b95f9b0cbcdfc0228c9cda-us7"
@@ -62,10 +65,3 @@ app.post("/failure",function(req, res){
 app.listen(process.env.PORT || 3000, function(){
   console.log("Started hosting at heroku ");
 });
-
-
-//API Key
-// 8c0cfe6e95b95f9b0cbcdfc0228c9cda-us7
-
-//List ID
-// 23e69263c0
